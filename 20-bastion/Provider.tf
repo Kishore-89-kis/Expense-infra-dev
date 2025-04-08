@@ -1,13 +1,19 @@
 terraform {
-    required_providers {
-      aws = {
-        source = "hashicorp/aws"
-        version = "5.84.0"
-      }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.84.0"
     }
-    
+  }
+
+  backend "s3" {
+    bucket         = "82f-remote-state-dev"
+    key            = "expense-dev-bastion"
+    region         = "us-east-1"
+    dynamodb_table = "82f-remote-state-dev"
+  }
 }
 provider "aws" {
-    #configuration options
-    region = "us-east-1"
+  # Configuration options
+  region = "us-east-1"
 }
