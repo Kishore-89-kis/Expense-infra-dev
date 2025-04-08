@@ -8,7 +8,7 @@ terraform {
 
    backend "s3" {
     bucket         = "82f-remote-state-dev"
-    key            = "expense-dev-vpc"
+    key            = "expense-dev-sg"
     region         = "us-east-1"
     dynamodb_table = "82f-remote-state-dev"
   }

@@ -1,6 +1,7 @@
 module "mysql_sg" {
    #source = "../terraform-aws-Security-group" 
-   source = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   # source = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   source = "../../terraform-aws-security-group"
    project_name = var.project_name
    environment = var.environment
    sg_name = "mysql"
@@ -11,7 +12,8 @@ module "mysql_sg" {
 }
 
 module "backend_sg" {
-   source = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   #ource = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   source = "../../terraform-aws-security-group"
    project_name = var.project_name
    environment = var.environment
    sg_name = "backend"
@@ -22,7 +24,8 @@ module "backend_sg" {
 }
 
 module "froentend_sg" {
-   source = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   #ource = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   source = "../../terraform-aws-security-group"
    project_name = var.project_name
    environment = var.environment
    sg_name = "froentend"
@@ -33,7 +36,8 @@ module "froentend_sg" {
 }
 
 module "bastion_sg" {
-   source = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   #ource = "git::https://github.com/Kishore-89-kis/terraform-aws-security-group.git?ref=main"
+   source = "../../terraform-aws-security-group"
    project_name = var.project_name
    environment = var.environment
    sg_name = "bastion"

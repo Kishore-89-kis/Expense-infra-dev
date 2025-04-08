@@ -19,5 +19,5 @@ resource "aws_ssm_parameter" "froentend_sg_id" {
 resource "aws_ssm_parameter" "bastion_sg_id" {
   name  = "/${var.project_name}/${var.environment}/bastion_sg_id"
   type  = "String"
-  value = module.froentend_sg.sg_id
+  value = module.bastion_sg.sg_id
 }
