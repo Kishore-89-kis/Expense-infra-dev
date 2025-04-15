@@ -13,3 +13,11 @@ variable "common_tags" {
         terraform = "true"
     }
 }
+
+variable "zone_id"{
+  default = "Z0900054KDP6PKE6NP4R"
+}
+
+variable "domain_name" {
+    default = "kishore.store"
+}
